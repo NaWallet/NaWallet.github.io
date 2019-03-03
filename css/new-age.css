@@ -82,13 +82,13 @@ section h2 {
 }
 
 #mainNav .navbar-toggler {
-  font-size: 12px;
+  font-size: 18px;
   padding: 8px 10px;
   color: #222222;
 }
 
 #mainNav .navbar-nav > li > a {
-  font-size: 11px;
+  font-size: 18px;
   font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -170,7 +170,7 @@ header.masthead .header-content {
 }
 
 header.masthead .header-content h1 {
-  font-size: 30px;
+  font-size: 50px;
 }
 
 header.masthead .device-container {
@@ -195,7 +195,7 @@ header.masthead .device-container .screen img {
     text-align: left;
   }
   header.masthead .header-content h1 {
-    font-size: 50px;
+    font-size: 60px;
   }
   header.masthead .device-container {
     max-width: 325px;
@@ -234,7 +234,7 @@ section.download .badges .badge-link img {
 
 @media (min-width: 768px) {
   section.download h2 {
-    font-size: 70px;
+    font-size: 60px;
   }
 }
 
@@ -309,7 +309,7 @@ section.cta .cta-content h2 {
 
 @media (min-width: 768px) {
   section.cta .cta-content h2 {
-    font-size: 80px;
+    font-size: 60px;
   }
 }
 
@@ -433,6 +433,6 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 .btn-xl {
-  font-size: 11px;
-  padding: 15px 45px;
+  font-size: 14px;
+  padding: 10px 25px;
 }

@@ -13,14 +13,14 @@
         }
     }
     .navbar-toggler {
-        font-size: 12px;
+        font-size: 18px;
         padding: 8px 10px;
         color: $gray-darker;
     }
     .navbar-nav {
         > li {
             > a {
-                font-size: 11px;
+                font-size: 18px;
                 @include alt-font;
                 &.active {
                     color: $theme-primary !important;
