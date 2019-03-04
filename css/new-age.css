@@ -350,27 +350,27 @@ section.contact ul.list-social li a {
   border-radius: 100%;
 }
 
-section.contact ul.list-social li.social-twitter a {
+section.contact ul.list-social li.social-email a {
   background-color: #1da1f2;
 }
 
-section.contact ul.list-social li.social-twitter a:hover {
+section.contact ul.list-social li.social-email a:hover {
   background-color: #0d95e8;
 }
 
-section.contact ul.list-social li.social-facebook a {
-  background-color: #3b5998;
+section.contact ul.list-social li.social-github a {
+  background-color: #24292e;
 }
 
-section.contact ul.list-social li.social-facebook a:hover {
-  background-color: #344e86;
+section.contact ul.list-social li.social-github a:hover {
+  background-color: #191c20;
 }
 
-section.contact ul.list-social li.social-google-plus a {
+section.contact ul.list-social li.social-feedback a {
   background-color: #dd4b39;
 }
 
-section.contact ul.list-social li.social-google-plus a:hover {
+section.contact ul.list-social li.social-feedback a:hover {
   background-color: #d73925;
 }
 
