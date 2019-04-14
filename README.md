@@ -9,12 +9,6 @@
 | 酷安 | <a href='https://www.coolapk.com/apk/me.bakumon.moneykeeper'><img alt='去酷安下载' src='https://ws4.sinaimg.cn/large/006tNc79ly1fsphx16ybdj30go06st8q.jpg' height="60"/>
 </a> |
 
-## App 预览
-
-![img.png](https://ws3.sinaimg.cn/large/005BYqpgly1g0rs78pr4jj31q10u0tn4.jpg)
-![img.png](https://ws3.sinaimg.cn/large/005BYqpgly1g0rs7po4ihj31q10u0dto.jpg)
-
-
 ## 说明
 
 网站修改自模版[startbootstrap-new-age](https://github.com/BlackrockDigital/startbootstrap-new-age)。
