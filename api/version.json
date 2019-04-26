@@ -1,7 +1,7 @@
 {
-  "version":"4.0.0",
-  "code":60,"updateType":1,
-  "content":"1. 配置主题色\n2. 亮色模式下列表等控件使用阴影\n3. 柱状图红绿配色、mark 圆角\n4. 更改编辑类型界面的输入框样式\n5. 增加配置项:月统计可选优先展示“账单”或“报表”\n6. 退出应用自动云备份：数据有变化时，才进行云备份",
-  "contentTW":"1. 配置主題色\n2. 亮色模式下列表等控件使用陰影\n3. 柱狀圖紅綠配色、mark 圓角\n4. 更改編輯類型界面的輸入框樣式\n5. 增加配置項:月統計可選優先展示“賬單”或“報表”\n6. 退出應用自動雲備份：數據有變化時，才進行雲備份",
-  "contentEN":"1. Configure the theme color\n2. The controls such as the list in the bright mode use the shadow \n3. The histogram red and green color matching, mark rounding \n4. Change the input box style of the editing type interface\n5. Add configuration item: monthly statistics optional Priority display \"Bill\" or \"Report\"\n6. Exit application automatic cloud backup: cloud backup is performed when data changes"
+  "version":"3.12.3",
+  "code":56,"updateType":0,
+  "content":"",
+  "contentTW":"",
+  "contentEN":""
 }
