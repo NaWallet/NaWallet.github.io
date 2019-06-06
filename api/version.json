@@ -1,8 +1,1 @@
-{
-  "updateType":0,
-  "version":"3.14.0",
-  "code":59,
-  "content":"1. 信用账户还款提示\n2. 选择账户时，显示剩余额度\n3. 记录详情页，点击账户名跳转账户详情\n4. 允许修改银行图标",
-  "contentTW":"1. 信用賬戶還款提示\n2. 選擇賬戶時，顯示剩餘額度\n3. 記錄詳情頁，點擊賬戶名跳轉賬戶詳情\n4. 允許修改銀行圖標",
-  "contentEN":"1. Credit account repayment prompt\n2. When selecting an account, the remaining amount is displayed\n3. Record details page, click account name to jump account details\n4. Allow modification of bank icon"
-}
+{"updateType":0,"version":"3.15.0","code":61,"content":"1. 回顾页面重新设计\n2. 桌面小部件最小4*1\n\n近期更新：\n1. 信用账户还款提示","contentTW":"1. 回顧頁面重新設計\n2. 桌面小部件最小4*1\n\n近期更新：\n1. 信用賬戶還款提示","contentEN":"1. Review page redesign\n2. Desktop widget minimum 4*1\n\nRecently updated:\n1. Credit account repayment tips"}
