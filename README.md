@@ -11,5 +11,5 @@
 
 ## 说明
 
-网站修改自模版[startbootstrap-new-age](https://github.com/BlackrockDigital/startbootstrap-new-age)。
+网站使用模版[startbootstrap-new-age](https://github.com/BlackrockDigital/startbootstrap-new-age)。
 
