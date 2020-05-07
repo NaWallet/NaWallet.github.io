@@ -1,1 +1,1 @@
-{"updateType":1,"version":"6.0.0","code":1000087,"content":"1. 债务账户（借入借出）\n2. 自定义主题背景","contentTW":"1. 債務賬戶（借入借出）\n2. 自定義主題背景","contentEN":"1. Debt account (borrowing and lending)\n2. Custom theme image"}
+{"updateType":1,"version":"6.1.2","code":1000091,"content":"1. 修复恢复备份失败问题\n2. 资产首页改版，账户增加“计入总资产”选项","contentTW":"1.修復恢復備份失敗問題\n2. 資產首頁改版，賬戶增加“計入總資產”選項","contentEN":"1. Fix the problem of failed backup and recovery \n2. The homepage of the asset has been revised, and the account has the option of 'Include in total assets'"}
