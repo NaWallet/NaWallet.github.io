@@ -1,1 +1,8 @@
-{"updateType":1,"version":"6.1.2","code":1000091,"content":"1. 修复恢复备份失败问题\n2. 资产首页改版，账户增加“计入总资产”选项","contentTW":"1.修復恢復備份失敗問題\n2. 資產首頁改版，賬戶增加“計入總資產”選項","contentEN":"1. Fix the problem of failed backup and recovery \n2. The homepage of the asset has been revised, and the account has the option of 'Include in total assets'"}
+{
+    "updateType":1,
+    "version":"6.2.0",
+    "code":1000095,
+    "content":"1. 全新图标风格，增加常用图标\n2. 适配平板，首页高斯模糊\n3. 全新暗色模式配色\n4. 增加直接记账的桌面小部件",
+    "contentTW":"1. 全新圖標風格，增加常用圖標\n2. 適配平板，首頁高斯模糊\n3. 全新暗色模式配色\n4. 增加直接記賬的桌面小部件",
+    "contentEN":"1. New icon style, add some icons\n2. Adapt to tablet, homepage Gaussian blur\n3. New color scheme for dark mode\n4. Add widget for direct accounting"
+}
