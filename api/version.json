@@ -1,8 +1,8 @@
 {
     "updateType":1,
-    "version":"6.3.0",
-    "code":1000096,
-    "content":"1. 更加直观、颜值更高的新版主题设置页面\n2. 增加汽车、自行车和书籍图标\n3. 新增“有备无患”徽章\n4. 桌面小部件可配置圆角\n5. 账户详情可查看收支总额，转账总额，初始金额，方便简单对账",
-    "contentTW":"1. 更加直觀、顏值更高的新版主題設置頁面\n2. 增加汽車、自行車和書籍圖標\n3. 新增“有備無患”徽章\n4. 桌面小部件可配置圓角\n5. 賬戶詳情可查看收支總額，轉賬總額，初始金額，方便簡單對賬",
-    "contentEN":"1. The new theme setting page is more intuitive and attractive\n2. Add car, bicycle and book icons\n3. Added the \"Cloud backup\" badge\n4. Desktop widgets can be configured with rounded corners\n5. Account details can view the total income and expenditure, the total transfer amount, the initial amount, which is convenient and simple to reconcile"
+    "version":"6.4.1",
+    "code":1000099,
+    "content":"1. 永久会员\n2. 三套图标包（会员）",
+    "contentTW":"1. 永久會員\n2. 三套圖標包（會員）",
+    "contentEN":"1. VIP \n2. Three sets of icon packs (VIP)"
 }
