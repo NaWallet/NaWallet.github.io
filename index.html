@@ -2,31 +2,9 @@
 <html lang="zh-CN">
 
 <head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="那样记账 - 纯粹的记账软件">
-  <meta name="author" content="Bakumon">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>那样记账 - 纯粹的记账软件</title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-  <link rel="icon" sizes="192x192" href="img/wallet.png" />
-  <link rel="shortcut icon" href="img/wallet.png" type="image/png" />
-
-  <!-- Plugin CSS -->
-  <!-- <link rel="stylesheet" href="device-mockups/device-mockups.min.css"> -->
-
-  <!-- Custom styles for this template -->
-  <link href="css/new-age.min.css" rel="stylesheet">
 
   <meta property="og:title" content="那样记账 - 纯粹的记账软件" />
   <meta property="og:locale" content="zh_CN" />
@@ -41,216 +19,185 @@
   <meta property="og:image:height" content="570" />
   <meta name="twitter:card" content="summary_large_image" />
 
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <style>
+    body {
+      background: linear-gradient(90deg, #c2daf0 0%, #eae6fa 100%);
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      .header {
+        justify-content: center;
+      }
+    }
+
+    .logo {
+      width: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .logo {
+        margin-bottom: 0px;
+      }
+    }
+
+    .nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+    }
+
+    .nav a {
+      font-size: 16px;
+      line-height: 19px;
+      color: #8C8E9E;
+      padding: 0px 32px;
+      transition: 150ms;
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      color: #9576fc;
+    }
+
+    .summary {
+      padding: 60px 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 768px) {
+      .summary {
+        flex-direction: column;
+        padding: 15px 15px;
+        text-align: center;
+      }
+    }
+
+    .app-info h1 {
+      font-size: 60px;
+      color: #060C3A;
+      margin-bottom: 30px;
+    }
+
+    .app-info span {
+      font-size: 54px;
+    }
+
+
+    @media screen and (max-width: 768px) {
+      .app-info h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+      }
+
+      .app-info span {
+        font-size: 40px;
+      }
+    }
+
+    .app-info p {
+      font-size: 20px;
+      font-weight: bold;
+      color: #8C8E9E;
+      max-width: 379px;
+      line-height: 36px;
+      margin-bottom: 36px;
+      max-width: 500px;
+      margin: 0 auto;
+      margin-bottom: 60px;
+    }
+
+    .download {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      color: #8C8E9E;
+    }
+
+    .google-play {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .apk {
+      padding: 19px 30px;
+      background: #000000;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 600;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+
+    .screenshot {
+      width: 500px;
+    }
+
+    .screenshot img {
+      display: block;
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .screenshot {
+        width: 100%;
+        margin: 0 auto;
+        padding: 40px 0px;
+      }
+    }
+  </style>
 </head>
 
-<body id="page-top">
-
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">那样记账</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#download">下载</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#features">功能特性</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">联系我们</a>
-          </li>
-        </ul>
-      </div>
+<body>
+  <div class="header">
+    <div>
+      <img class="logo" src="img/logo.png" alt="Logo">
     </div>
-  </nav>
-
-  <header class="masthead">
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-lg-7 my-auto">
-          <div class="header-content mx-auto">
-            <h1 class="mb-5">那样记账</h1>
-            <h5 class="mb-5">一款面向个人、纯粹的记账软件。</h5>
-            <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">立即下载</a>
-          </div>
-        </div>
-        <div class="col-lg-5 my-auto">
-          <div class="device-container">
-            <!-- <div class="device-mockup galaxy_s5 portrait black"> -->
-              <div class="device">
-                <div class="screen">
-                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <img src="img/s1.png" class="img-fluid" alt="">
-                </div>
-                <div class="button">
-                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                </div>
-              </div>
-            <!-- </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="download bg-primary text-center" id="download">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-          <h2 class="section-heading">立即开始记账</h2>
-          <p>这是一款 Android 端的记账应用，可以在 Google Play 或酷安下载</p>
-          <div class="badges">
-            <a class="badge-link" href="https://play.google.com/store/apps/details?id=me.bakumon.moneykeeper" target="_blank"><img src="img/google-play-badge.svg" alt=""></a>
-            <a class="badge-link" href="https://www.coolapk.com/apk/me.bakumon.moneykeeper" target="_blank"><img src="img/coolapk-badge.svg" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="features" id="features">
-    <div class="container">
-      <div class="section-heading text-center">
-        <h2>功能特性</h2>
-        <p class="text-muted">适合个人记账的功能特性</p>
-        <hr>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 my-auto">
-          <div class="device-container">
-            <!-- <div class="device-mockup iphone6_plus portrait white"> -->
-              <div class="device">
-                <div class="screen">
-                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <img src="img/s2.png" class="img-fluid" alt="">
-                </div>
-                <div class="button">
-                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                </div>
-              </div>
-            <!-- </div> -->
-          </div>
-        </div>
-        <div class="col-lg-8 my-auto">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-plane text-primary"></i>
-                  <h3>简单快速</h3>
-                  <p class="text-muted">打开应用或通过 Shortcut 快速记账；根据所选记账类型自动选择上次使用的账户</p>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-chart text-primary"></i>
-                  <h3>多维度统计</h3>
-                  <p class="text-muted">每日收支柱形图；收支分类饼图；年度统计</p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-wallet text-primary"></i>
-                  <h3>资金账户</h3>
-                  <p class="text-muted">包含普通账户、信用账户以及借入借出</p>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-lock text-primary"></i>
-                  <h3>数据安全</h3>
-                  <p class="text-muted">数据掌握在用户手中，可全量备份在手机内部储存，同时可选 WebDAV 云盘储存</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <div class="cta-content">
-      <div class="container">
-        <h2>生活越复杂，</h2>
-        <h2>记账越有用。</h2>
-        <!-- <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">开始</a> -->
-      </div>
-    </div>
-    <div class="overlay"></div>
-  </section>
-
-  <section class="contact bg-primary" id="contact">
-    <div class="container">
-      <h2>We
-        <i class="fas fa-heart"></i>
-        new friends!</h2>
-      <ul class="list-inline list-social">
-        <li class="list-inline-item social-email">
-          <a href="mailto:bakumon.me@gmail.com">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </li>
-        <li class="list-inline-item social-github">
-          <a href="https://github.com/NaWallet" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-        <li class="list-inline-item social-feedback">
-          <a href="https://support.qq.com/product/41058" target="_blank">
-            <i class="far fa-smile"></i>
-          </a>
-        </li>
+    <nav class="nav">
+      <ul>
+        <li><a href="changelog.html">更新记录</a></li>
       </ul>
+    </nav>
+  </div>
+  <div class="summary">
+    <div class="app-info">
+      <h1>那样记账
+        <br /><span>- 纯粹的记账软件</span>
+      </h1>
+      <p>一款面向个人、纯粹的记账软件。</p>
+
+      <div class="download">
+        <a href="https://play.google.com/store/apps/details?id=me.bakumon.moneykeeper"><img class="google-play" src="img/google-play-badge.svg"></a>
+        或
+        <a class="apk" href="https://www.coolapk.com/apk/me.bakumon.moneykeeper">酷安下载</a>
+      </div>
     </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; Bakumon 2018-2019. All Rights Reserved.</p>
-      <ul class="list-inline">
-        <li class="list-inline-item">
-          <a href="https://github.com/NaWallet/Resources/blob/master/PrivacyPolicy.md" target="_blank">隐私政策</a>
-        </li>
-        <li class="list-inline-item">
-            <a href="https://github.com/orgs/NaWallet/projects/1" target="_blank">开发计划</a>
-        </li>
-        <li class="list-inline-item">
-            <a href="https://github.com/NaWallet/Resources/blob/master/CHANGELOG.md" target="_blank">更新记录</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="https://support.qq.com/products/41058/faqs-more" target="_blank">FAQ</a>
-        </li>
-      </ul>
+    <div class="screenshot">
+      <img src="img/screent.png" alt="Screenshot">
     </div>
-  </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/new-age.min.js"></script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-93920714-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-93920714-2');
-  </script>
-
+  </div>
 </body>
 
 </html>

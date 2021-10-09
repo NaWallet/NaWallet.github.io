@@ -1,0 +1,608 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-fences-math .MathJax_SVG_Display, .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: visible; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; zoom: 90%; }
+#math-inline-preview-content { zoom: 1.1; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-math .MathJax_SVG_Display { margin-top: 8px; cursor: default; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>changelog</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h3 id='那样记账-更新记录'><span>那样记账 更新记录</span></h3><h4 id='670'><span>6.7.0</span></h4><p><span>2021-06-29</span></p><ul><li><span>全新设计的设置页面</span></li><li><span>统计界面顶部重新设计，选择月度年度更加直观</span></li><li><span>主题页面适配横屏</span></li><li><span>饼图右侧列表显示百分比</span></li><li><span>资产详情增加相关债务记录列表</span></li><li><span>资产详情修改余额记录默认不显示</span></li><li><span>首页不再显示修改记录</span></li><li><span>首页最近记录日期后增加星期</span></li><li><span>转账时可切换转出转入账户</span></li><li><span>增加卢比货币符号</span></li><li><span>增加一个隐藏徽章</span></li><li><span>修复气泡提示显示错乱问题</span></li><li><span>修复选择今天晚于此刻的时间记账后，首页不显示这条记录的问题</span></li><li><span>修复切换到无记录的年份，折线图还显示上个年份的记录的问题</span></li><li><span>修复输入金额可能导致弹出系统软键盘问题</span></li><li><span>其他细节优化</span></li></ul><h4 id='660'><span>6.6.0</span></h4><p><span>2021-02-05</span></p><ul><li><span>增加日历视图</span></li><li><span>年统计和月统计合并，可在原月统计界面切换</span></li><li><span>首页列表模块可配置（月预算和资产账户均可隐藏）</span></li><li><span>所有数字键盘支持加减运算、按键震动（可配置）</span></li><li><span>调整亮色主题下的背景色</span></li><li><span>默认英文</span></li><li><span>债务详情的记录列表显示备注</span></li><li><span>超出预算时，滑动列表复用问题</span></li><li><span>关闭时间和日期对话框的震动效果</span></li><li><span>取消记账当日时分的限制</span></li></ul><h4 id='652'><span>6.5.2</span></h4><p><span>2020.12.13</span></p><ul><li><span>增加：月统计界面是否显示背景图片的开关</span></li><li><span>优化：&quot;记一笔&quot;界面适配分屏和横屏模式</span></li><li><span>优化：tab 页面均可滑动切换（记一笔、分类管理等页面）</span></li><li><span>优化：替换空数据图片</span></li><li><span>修复：解决记账界面可能会奔溃的问题</span></li><li><span>修复：首页今日或本月支出不更新问题</span></li><li><span>修复：首页预算进度条不更新问题</span></li></ul><h4 id='651'><span>6.5.1</span></h4><p><span>2020.11.25</span></p><ol start='' ><li><span>紧急修复激活码接口一直加载中的问题</span></li><li><span>首页日期后增加当日的收支总额</span></li><li><span>月统计界面增加对应月份的背景图片</span></li></ol><h4 id='650'><span>6.5.0</span></h4><p><span>2020.10.23</span></p><ol start='' ><li><span>重新设计月统计界面</span></li><li><span>会员徽章</span></li><li><span>增加华夏银行图标</span></li><li><span>避免首页闪动问题</span></li><li><span>取消捐赠入口</span></li></ol><h4 id='641'><span>6.4.1</span></h4><p><span>2020.10.01</span></p><ol start='' ><li><span>会员</span></li><li><span>增加三套图标包（会员功能）</span></li></ol><h4 id='630'><span>6.3.0</span></h4><p><span>2020.08.11</span></p><ol start='' ><li><span>新版主题界面</span></li><li><span>“有备无患” 徽章</span></li><li><span>账户详情简单对账</span></li><li><span>桌面小部件圆角</span></li></ol><h4 id='620'><span>6.2.0</span></h4><p><span>2020.07.26</span></p><ol start='' ><li><span>更换收支分类图标风格，增加更多分类图标</span></li><li><span>添加收支分类时，提供图标的建议名称</span></li><li><span>全新暗色模式配色</span></li><li><span>适配平板</span></li><li><span>首页高斯模糊效果</span></li><li><span>增加直接记账的桌面小部件</span></li><li><span>修复“再记”可能会导致的账户余额错误问题</span></li><li><span>修复账户详情账户名显示问题</span></li></ol><h4 id='612'><span>6.1.2</span></h4><p><span>2020.05.07</span></p><ol start='' ><li><span>修复资产统计&quot;计入总资产&quot;选项兼容 null</span></li></ol><h4 id='611'><span>6.1.1</span></h4><p><span>2020.05.07</span></p><ol start='' ><li><span>修复&quot;计入总资产&quot;选项兼容 null</span></li></ol><h4 id='610'><span>6.1.0</span></h4><p><span>2020.05.06</span></p><ol start='' ><li><span>修复恢复备份失败问题</span></li><li><span>资产首页改版</span></li><li><span>账户增加“计入总资产”选项</span></li><li><span>修复债务记录没有计入到徽章</span></li><li><span>优化：保存信用账户时，提示当前欠款需要是负数</span></li><li><span>优化：顺滑切换语言和暗黑模式（避免闪屏）</span></li><li><span>可从系统应用信息页面进入到 app 设置页面</span></li></ol><h4 id='603'><span>6.0.3</span></h4><p><span>2020.04.14</span></p><ol start='' ><li><span>修复崩溃问题（删除 work 库）</span></li></ol><h4 id='602'><span>6.0.2</span></h4><p><span>2020.04.14</span></p><ol start='' ><li><span>删除设置主题图片强制文字颜色的菜单</span></li><li><span>备份文件列表不显示非 zip 和隐藏文件</span></li></ol><h4 id='601'><span>6.0.1</span></h4><p><span>2020.04.14</span></p><ol start='' ><li><span>修复首页设置和统计按钮点击不到的问题</span></li><li><span>修复首页预算动画闪动问题</span></li><li><span>暗黑模式下，首页主题图调暗，避免过于刺眼</span></li><li><span>增加一批新的主题图片，来自 Unsplash</span></li></ol><h4 id='600'><span>6.0.0</span></h4><p><span>2020.03.29</span></p><p><span>新增：</span></p><ol start='' ><li><span>增加债务系统，包括创建债务账户，添加债务记录（借入、借出、还款和收款）</span></li><li><span>主题增加”根据日出日落“选项（感谢@RebornQ）</span></li><li><span>自定义主题背景</span></li><li><span>双击首页顶部位置，列表回到顶部</span></li></ol><p><span>优化：</span></p><ol start='' ><li><span>去掉总支出前面的负号</span></li><li><span>“结余”修改为“净收入”</span></li><li><span>首页显示最近100+条数据</span></li><li><span>修改语言和主题后，立即生效，不再重启应用（感谢@RebornQ）</span></li><li><span>增加印尼盾货币符号</span></li><li><span>减少了一点 apk 体积</span></li></ol><p><span>修复：</span></p><ol start='' ><li><span>直接打开记一笔，记账成功后，没有自动云备份</span></li><li><span>数字键盘禁止输入非法数字</span></li><li><span>Android 10 选择主题跟随系统后，选择日期和时间对话框主题不更改</span></li></ol><h4 id='511'><span>5.1.1</span></h4><p><span>2019.11.12</span></p><ol start='' ><li><span>暂时取消 AndResGuard （选择时间时崩溃）</span></li></ol><h4 id='510'><span>5.1.0</span></h4><p><span>2019.11.12</span></p><ol start='' ><li><span>首页资产可折叠</span></li><li><span>首页预算可隐藏</span></li><li><span>点击分类预算item进入分类统计界面</span></li><li><span>新增和修改分类预算检查是否重复</span></li><li><span>提示分类预算超过总预算</span></li><li><span>增加马币符号</span></li><li><span>减小 apk 体积</span></li></ol><h4 id='503'><span>5.0.3</span></h4><p><span>2019.11.04</span></p><ol start='' ><li><span>修复首页计算剩余日均奔溃问题</span></li></ol><h4 id='501'><span>5.0.1</span></h4><p><span>2019.11.04</span></p><ol start='' ><li><span>修改翻译错误</span></li><li><span>显示分类预算总额总和</span></li></ol><h4 id='500'><span>5.0.0</span></h4><p><span>2019.11.03</span></p><ol start='' ><li><span>分类预算</span></li><li><span>首页改版-顶部只显示“今日支出”和“本月支出”</span></li><li><span>首页改版-列表增加月预算汇总</span></li><li><span>首页改版-列表增加资产</span></li><li><span>常用备注可删除</span></li><li><span>去掉金额“万”等字样</span></li><li><span>雪花彩蛋徽章</span></li><li><span>targetSdkVersion 升级到 29 （Android 10）</span></li></ol><h4 id='430'><span>4.3.0</span></h4><p><span>2019.09.17</span></p><ol start='' ><li><span>账户详情增加“记一笔”按钮</span></li><li><span>增加开关：是否允许截屏</span></li><li><span>优化锁屏（避免快速多次打开app，可能会跳过锁屏界面）</span></li><li><span>Android 10 手机默认主题：系统默认设置</span></li></ol><h4 id='422'><span>4.2.2</span></h4><p><span>2019.09.07</span></p><ol start='' ><li><span>Android 10 主题默认改回亮色</span></li></ol><h4 id='420'><span>4.2.0</span></h4><p><span>2019.09.07</span></p><ol start='' ><li><span>搜索收支结果，统计汇总信息</span></li><li><span>适配 Android 10 新导航手势（沉浸式）</span></li><li><span>适配 Android 10 暗黑模式（修复导航颜色）</span></li></ol><h4 id='410'><span>4.1.0</span></h4><p><span>2019.08.29</span></p><ol start='' ><li><span>复制账单功能（账单详情）</span></li><li><span>支出统一添加负号</span></li><li><span>避免账户名称太长，导致显示异常问题</span></li><li><span>增加捐赠选项</span></li></ol><h4 id='402'><span>4.0.2</span></h4><p><span>2019.08.23</span></p><ol start='' ><li><span>优化搜索（排除模糊搜索关键字 _ 和 %）</span></li><li><span>修复切换语言失效的问题</span></li></ol><h4 id='401'><span>4.0.1</span></h4><p><span>2019.08.21</span></p><ol start='' ><li><span>适配 Android Q 夜间模式（主题模式可选跟随系统）</span></li></ol><h4 id='400'><span>4.0.0</span></h4><p><span>2019.08.21</span></p><ol start='' ><li><span>搜索账单</span></li><li><span>增加设置项：是否显示记账时间</span></li></ol><h4 id='3181'><span>3.18.1</span></h4><p><span>2019.08.04</span></p><ol start='' ><li><span>捕获不支持 SAF 的异常</span></li></ol><h4 id='3180'><span>3.18.0</span></h4><p><span>2019.08.03</span></p><ol start='' ><li><span>适配 Android Q，取消存储空间权限</span></li><li><span>备份 zip 文件，节省流量</span></li><li><span>记录上次云备份时间</span></li></ol><h4 id='3170'><span>3.17.0</span></h4><p><span>2019.07.17</span></p><ol start='' ><li><span>可设置首页主题背景</span></li><li><span>增加累计记账天数徽章</span></li><li><span>优化连续记账，可设置记账界面总显示“再记”按钮</span></li></ol><h4 id='3162'><span>3.16.2</span></h4><p><span>2019.07.03</span></p><ol start='' ><li><span>修复数字键盘显示异常问题</span></li><li><span>修复首页指示器可能不显示问题</span></li></ol><h4 id='3161'><span>3.16.1</span></h4><p><span>2019.07.02</span></p><ol start='' ><li><span>修复调大系统字体导致键盘显示不全</span></li></ol><h4 id='3160'><span>3.16.0</span></h4><p><span>2019.07.01</span></p><ol start='' ><li><span>数字键盘支持加减运算</span></li><li><span>回顾页面增加月平均支出和结余</span></li><li><span>记账总数徽章</span></li><li><span>遵循 Material Design 新设计规范，对话框使用圆角</span></li><li><span>指示器更加圆润的动画</span></li></ol><h4 id='3151'><span>3.15.1</span></h4><p><span>2019.06.07</span></p><ol start='' ><li><span>修复：打开快速记账和锁屏后，进入记账界面需要解锁</span></li></ol><h4 id='3150'><span>3.15.0</span></h4><p><span>2019.06.07</span></p><ol start='' ><li><span>桌面小部件最小4*1，可调整宽度</span></li><li><span>回顾页面重新设计</span></li></ol><h4 id='3141'><span>3.14.1</span></h4><p><span>2019.05.17</span></p><ol start='' ><li><span>修复荣耀v20，首页顶部布局异常问题</span></li><li><span>优化部分布局</span></li><li><span>记录详情账户名称名称着色</span></li></ol><h4 id='3140'><span>3.14.0</span></h4><p><span>2019.05.08</span></p><ol start='' ><li><span>信用账户还款提示</span></li><li><span>选择账户时，显示剩余额度</span></li><li><span>记录详情页，点击账户名跳转账户详情</span></li><li><span>允许修改银行图标</span></li></ol><h4 id='3131'><span>3.13.1</span></h4><p><span>2019.05.06</span></p><ol start='' ><li><span>修改文字错误</span></li></ol><h4 id='3130'><span>3.13.0</span></h4><p><span>2019.05.06</span></p><ol start='' ><li><span>完善信用账户：总额度、账单日还款日、卡号</span></li><li><span>信用账户详情增加还款按钮、剩余额度、还款日</span></li><li><span>点击柱状图，列表自动滑动到对应日期</span></li><li><span>增加记录详情页面，去除锁定记录设置项</span></li><li><span>分类记录界面显示记录总数</span></li><li><span>减少 apk 体积</span></li><li><span>关于-检查更新</span></li><li><span>解决个别 HTC 手机崩溃问题</span></li><li><span>其他优化</span></li></ol><h4 id='3123'><span>3.12.3</span></h4><p><span>2019.04.17</span></p><ol start='' ><li><span>支持渐变色</span></li><li><span>适配导航栏字体颜色</span></li></ol><h4 id='3122'><span>3.12.2</span></h4><p><span>2019.04.15</span></p><ol start='' ><li><span>修复：记一笔界面选择时间等控件文字不显示问题</span></li></ol><h4 id='3121'><span>3.12.1</span></h4><p><span>2019.04.15</span></p><ol start='' ><li><span>修复：修改收支记录时选择原用资产账户导致重复计算（非常重要）</span></li></ol><h4 id='3120'><span>3.12.0</span></h4><p><span>2019.04.14</span></p><ol start='' ><li><span>配置主题色</span></li><li><span>亮色模式下列表等控件使用阴影</span></li><li><span>柱状图红绿配色、mark 圆角</span></li><li><span>更改编辑类型界面的输入框样式</span></li><li><span>增加配置项:月统计可选优先展示“账单”或“报表”</span></li><li><span>退出应用自动云备份：数据有变化时，才进行云备份</span></li><li><span>优化数据库</span></li></ol><h4 id='3110'><span>3.11.0</span></h4><p><span>2019.04.09</span></p><ol start='' ><li><span>修复：饼图点击进入分类账单界面，没有数据</span></li><li><span>首页列表增加转账和修改余额记录</span></li><li><span>首页列表改成显示最近一个月的数据</span></li><li><span>默认亮色主题（只对新安装用户生效）</span></li><li><span>系统应用信息页面国际化</span></li><li><span>禁止截屏给用户提示</span></li></ol><h4 id='3102'><span>3.10.2</span></h4><p><span>2019.04.03</span></p><ol start='' ><li><span>修复使用指纹解锁后，屏下指纹依然显示</span></li><li><span>记录列表中，非本年的时间显示年份</span></li><li><span>资产详情账单列表增加时间、并在最底部显示总记录数</span></li><li><span>增加广发银行图标</span></li></ol><h4 id='3101'><span>3.10.1</span></h4><p><span>2019.04.02</span></p><ol start='' ><li><span>点击首页“设置预算”跳转到常规设置界面</span></li><li><span>修复若干bug</span></li></ol><h4 id='3100'><span>3.10.0</span></h4><p><span>2019.04.01</span></p><ol start='' ><li><span>支持0元记账</span></li><li><span>可自定义桌面小部件样式</span></li><li><span>重构设置界面</span></li><li><span>重新适配状态栏和导航栏</span></li><li><span>增加南京银行、上海银行</span></li></ol><h4 id='391'><span>3.9.1</span></h4><p><span>2019.03.28</span></p><ol start='' ><li><span>自适应启动图标</span></li><li><span>时分两位数显示</span></li><li><span>修复：重复显示选择账户对话框，导致奔溃</span></li><li><span>修复：魅族魅蓝E创建账户时闪退</span></li></ol><h4 id='390'><span>3.9.0</span></h4><p><span>2019.03.21</span></p><ol start='' ><li><span>增加一名开发者😄</span></li><li><span>支持手动选择语言</span></li><li><span>细节优化</span></li></ol><h4 id='385'><span>3.8.5</span></h4><p><span>2019.03.16</span></p><ol start='' ><li><span>fix：时钟不能选择比当前更晚的时间，即使日期不是今天</span></li></ol><h4 id='384'><span>3.8.4</span></h4><p><span>2019.03.15</span></p><ol start='' ><li><span>修复账单统计每日总金额错误</span></li></ol><h4 id='383'><span>3.8.3</span></h4><p><span>2019.03.15</span></p><ol start='' ><li><span>修复桌面小部件导致奔溃</span></li></ol><h4 id='382'><span>3.8.2</span></h4><p><span>2019.03.15</span></p><ol start='' ><li><span>修复桌面小部件今日支出更新错误</span></li></ol><h4 id='381'><span>3.8.1</span></h4><p><span>2019.03.14</span></p><ol start='' ><li><span>修复桌面小部件今日支出更新错误</span></li></ol><h4 id='380'><span>3.8.0</span></h4><p><span>2019.03.13</span></p><p><span>增加：</span></p><ol start='' ><li><span>支持信用账户（修改资产账户时可选图标）</span></li><li><span>记账时可选小时和分钟</span></li><li><span>增加澳元符号</span></li></ol><p><span>修改：</span></p><ol start='' ><li><span>使用 MD2 输入框风格</span></li><li><span>从Shortcut直接进入“记一笔”界面，退出后也需要进行云备份</span></li><li><span>记账输入框可输入亿级别、月预算和账户余额可输入千亿级别</span></li><li><span>英文名修改为 &quot;NaWallet&quot;</span></li><li><span>取消更新日志链接、修改隐私权链接、增加官网链接</span></li><li><span>修复：亮色主题下，选择月份右箭头不可用颜色不明显</span></li><li><span>修复：修改记录，资金未同步</span></li><li><span>修复：桌面小部件一行显示不完整</span></li></ol><h4 id='372'><span>3.7.2</span></h4><p><span>2019.01.27</span></p><ol start='' ><li><span>修复修改记录时可能出现的错误（非常重要）</span></li><li><span>增加更新记录地址</span></li><li><span>取消首页“去设置”的提示</span></li></ol><h4 id='371'><span>3.7.1</span></h4><p><span>2019.01.25</span></p><ol start='' ><li><span>支持设置 http WebDAV 地址</span></li><li><span>去掉开源和更新记录地址</span></li></ol><h4 id='370'><span>3.7.0</span></h4><p><span>2019.01.13</span></p><ol start='' ><li><span>支持设置月份起始日</span></li></ol><h4 id='361'><span>3.6.1</span></h4><p><span>2019.01.09</span></p><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>点击资产界面“转账”按钮，显示记录支出界面</span></li></ol><h4 id='360'><span>3.6.0</span></h4><p><span>2019.01.09</span></p><p><strong><span>增加：</span></strong></p><ol start='' ><li><span>增加设置项-按分类保存上次使用的资产</span></li><li><span>去除声明</span></li></ol><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>记一笔界面，转账选择的账户文件可能被遮挡</span></li></ol><h4 id='353'><span>3.5.3</span></h4><p><span>2018.12.30</span></p><ol start='' ><li><span>解决云备份可能会失败的问题</span></li><li><span>解决 WebDAV 地址输入不合法导致的奔溃问题</span></li><li><span>去除捐赠</span></li></ol><h4 id='352'><span>3.5.2</span></h4><p><span>2018.12.28</span></p><p><strong><span>解决：</span></strong></p><ol start='' ><li><span>桌面小部件导致的崩溃问题</span></li></ol><p><strong><span>增加：</span></strong></p><ol start='' ><li><span>选择系统锁屏或指纹锁屏后，最近任务列表隐藏 app 界面数据</span></li></ol><h4 id='351'><span>3.5.1</span></h4><p><span>2018.12.25</span></p><p><strong><span>解决：</span></strong></p><ol start='' ><li><span>点击“本地备份文件夹”导致奔溃（重要）</span></li></ol><p><strong><span>增加：</span></strong></p><ol start='' ><li><span>上锁开关，上锁后不能修改记录</span></li></ol><h4 id='350'><span>3.5.0</span></h4><p><span>2018.12.23</span></p><p><strong><span>增加：</span></strong></p><ol start='' ><li><span>记录列表显示账户名称</span></li><li><span>韩元符号</span></li><li><span>更新日志链接</span></li><li><span>WebDAV 对 pcloud 单独适配</span></li></ol><p><strong><span>优化：</span></strong></p><ol start='' ><li><span>迁移至 Androidx</span></li><li><span>重构设置界面，更加清晰、易扩展</span></li><li><span>滑动列表时，底部 FAB 显示和隐藏动画</span></li><li><span>没有资产账户，转账时提醒，而不是弹空的对话框</span></li><li><span>月预算支持输入小数</span></li><li><span>资产金额输入框可输入0和空</span></li><li><span>资产金额输入框仅输入负号导致崩溃</span></li><li><span>减小了一点 apk 体积</span></li><li><span>更改捐赠方式</span></li><li><span>取消 AndResGuard</span></li><li><span>取消 Cipher_so、aes_crypto</span></li></ol><p><strong><span>注意：</span></strong><span> 由于重构了设置界面代码，升级到该版本需要重新设置 WebDAV 地址等配置，由此带来不便，敬请谅解。</span></p><h4 id='341'><span>3.4.1</span></h4><p><span>2018.12.07</span></p><p><strong><span>增加：</span></strong></p><ol start='' ><li><span>增加 QQ 和 TG 群</span></li><li><span>其他人修改的版本的声明</span></li></ol><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>修复Android 9.0上恢复数据无效的 bug</span></li></ol><p><strong><span>注意：</span></strong><span> 升级到该版本，将不向下兼容，即 3.4.1 版本生成的备份数据，不支持在 3.4.0 及之前版本上恢复。</span></p><h4 id='340'><span>3.4.0</span></h4><p><span>2018.11.01</span></p><p><strong><span>新增：</span></strong></p><ol start='' ><li><span>指纹解锁</span></li><li><span>反馈功能</span></li></ol><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>资产管理的余额输入框可输入长度太小</span></li><li><span>首页改为显示最近 100 条数据</span></li><li><span>资产详情备注限制</span></li></ol><ul><li><span>单行--&gt;两行</span></li></ul><h4 id='332'><span>3.3.2</span></h4><p><span>2018.10.21</span></p><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>修复汇总数据显示不全</span></li><li><span>选择账户对话框显示账户余额</span></li><li><span>app 记账界面长时间处于后台，再次打开应用，保存记账导致崩溃</span></li></ol><h4 id='331'><span>3.3.1</span></h4><p><span>2018.09.26</span></p><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>点击较早时间的收支记录导致崩溃（重要）</span></li><li><span>金额总数，使用 “xxx 万” 的形式展示</span></li></ol><h4 id='330'><span>3.3.0</span></h4><p><span>2018.09.24</span></p><ol start='' ><li><span>记账时可选常用备注</span></li></ol><h4 id='320'><span>3.2.0</span></h4><p><span>2018.09.18</span></p><p><strong><span>新增：</span></strong></p><ol start='' ><li><span>“记一笔”界面增加转账选项</span></li><li><span>转账记录可编辑、删除</span></li><li><span>资产排序</span></li></ol><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>修复桌面小部件堆栈异常</span></li></ol><h4 id='310'><span>3.1.0</span></h4><p><span>2018.09.12</span></p><p><strong><span>新增：</span></strong></p><ol start='' ><li><span>资产详情页增加“账单”列表</span></li><li><span>账单列表 红绿区分支出和收入</span></li><li><span>收支类型标题输入框限制字数增加到 50</span></li></ol><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>修改收支记录金额，资产没有改变</span></li><li><span>修复已知 bug</span></li></ol><h4 id='300'><span>3.0.0</span></h4><p><span>2018.09.11</span></p><p><strong><span>新增：</span></strong></p><ol start='' ><li><span>多资产管理</span></li><li><span>记账时可以选择账户了</span></li><li><span>账户间转账</span></li><li><span>查看账户的转账、修改余额记录</span></li><li><span>增加了一些类型图标</span></li><li><span>数据库升级</span></li></ol><ul><li><span>不影响高低版本之间恢复db文件</span></li></ul><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>修复桌面小部件不能调整高度问题</span></li><li><span>取消“连续记账”设置项开关</span></li></ol><h4 id='230'><span>2.3.0</span></h4><p><span>2018.08.22</span></p><p><strong><span>功能：</span></strong></p><ol start='' ><li><span>桌面小部件</span></li><li><span>云备份备份模式增加「退出应用时备份」</span></li><li><span>可修改本地备份位置</span></li><li><span>点击记录编辑，长按删除</span></li><li><span>代码优化</span></li></ol><ul><li><span>使用 service 进行云盘备份</span></li></ul><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>先设置WebDAV密码导致的奔溃</span></li></ol><h4 id='221'><span>2.2.1</span></h4><p><span>2018.08.12</span></p><ol start='' ><li><span>修复dark主题下，设置界面文字颜色没有正确显示问题</span></li></ol><h4 id='220'><span>2.2.0</span></h4><p><span>2018.08.12</span></p><p><strong><span>新增：</span></strong></p><ol start='' ><li><span>亮色主题/暗色主题切换</span></li></ol><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>7月31日当天，选择月份混乱</span></li><li><span>退出应用后，从最近任务进入，会自动划掉应用</span></li></ol><h4 id='211'><span>2.1.1</span></h4><p><span>2018.08.09</span></p><p><strong><span>优化：</span></strong></p><ol start='' ><li><span>备注输入上限增加到50字</span></li><li><span>饼图增加说明：小于1.9%不显示</span></li><li><span>防止对话框重复弹起</span></li><li><span>首页头部设置文字增加点击效果</span></li><li><span>代码优化</span></li></ol><ul><li><span>使用 Toolbar 重构标题栏</span></li><li><span>弃用 DataBinding</span></li><li><span>弃用 BRVAH adapter</span></li><li><span>使用 multitype</span></li><li><span>数据库使用 LiveData 返回数据</span></li></ul><p><strong><span>修复：</span></strong></p><ol start='' ><li><span>从关于界面退出后，个别dialog界面和文字颜色发生变化</span></li><li><span>饼图有时会只显示两种颜色</span></li></ol><h4 id='210'><span>2.1.0</span></h4><p><span>2018.07.31</span></p><ol start='' ><li><span>增加自动云备份设置项</span></li></ol><ul><li><span>不自动备份</span></li><li><span>打开app时备份</span></li></ul><ol start='2' ><li><span>更新关于界面，加入Android应用友链</span></li></ol><h4 id='203'><span>2.0.3</span></h4><p><span>2018.07.28</span></p><ol start='' ><li><span>修复饼图 label 显示不全的问题</span></li></ol><h4 id='202'><span>2.0.2</span></h4><p><span>2018.07.27</span></p><ol start='' ><li><span>启动速度</span></li><li><span>柱状图：避免数据差距太大，小数据显示不出来</span></li><li><span>饼图：避免文字遮挡</span></li><li><span>类型排行列表：加入百分比条，增加直观性</span></li><li><span>折线图：横向平滑过度</span></li></ol><h4 id='201'><span>2.0.1</span></h4><p><span>2018.07.23</span></p><ol start='' ><li><span>减小 apk 体积</span></li></ol><ul><li><span>减小类型图片大小</span></li><li><span>只保留 armeabi-v7a cpu架构的 so 包</span></li></ul><ol start='2' ><li><span>开启 fabric Answers</span></li></ol><h4 id='200'><span>2.0.0</span></h4><p><span>2018.07.23</span></p><ol start='' ><li><span>WebDAV云盘备份</span></li></ol><ul><li><span>坚果云测试通过</span></li><li><span>城通测试通过</span></li></ul><ol start='2' ><li><span>加密保存WebDAV授权密码</span></li><li><span>使用受损的 db 文件恢复，自动回滚到恢复前状态</span></li><li><span>fabric 奔溃统计</span></li></ol><h4 id='161'><span>1.6.1</span></h4><p><span>2018.07.12</span></p><ol start='' ><li><span>未设置资产，数据改变不会修改资产</span></li></ol><h4 id='160'><span>1.6.0</span></h4><p><span>2018.07.12</span></p><ol start='' ><li><span>首页展示剩余总资产</span></li><li><span>可更改货币符号</span></li><li><span>取消折线图高亮线</span></li><li><span>修复：修改带有分隔符的记录奔溃</span></li><li><span>修复：小数点前只有0，不显示0问题</span></li></ol><h4 id='150'><span>1.5.0</span></h4><p><span>2018.07.07</span></p><ol start='' ><li><span>回顾--年度账单</span></li><li><span>增加分类图标--娱乐（电影）、野外活动（野炊）</span></li><li><span>千位分隔符</span></li><li><span>“设置”界面中的一些杂项移到“关于”界面</span></li><li><span>联系作者-邮件方式</span></li></ol><h4 id='140'><span>1.4.0</span></h4><p><span>2018.07.01</span></p><ol start='' ><li><span>代码 100% kotlin</span></li><li><span>使用 material_dialogs</span></li><li><span>更新库</span></li></ol><ul><li><span>选择日期控件增加横向滑动指示箭头</span></li></ul><ol start='4' ><li><span>增加一些分类图片：飞机、公交、房子、wifi、保险、红包、钱包</span></li><li><span>增加繁体字翻译</span></li></ol><h4 id='130'><span>1.3.0</span></h4><p><span>2018.06.19</span></p><ol start='' ><li><span>统计每月结余（收入减去支出）</span></li></ol><ul><li><span>当收入不为0时，才计算并显示结余</span></li></ul><h4 id='120'><span>1.2.0</span></h4><p><span>2018.06.19</span></p><ol start='' ><li><span>targetSdkVersion 升级到 28</span></li><li><span>快速记账</span></li><li><span>月预算</span></li></ol><h4 id='111'><span>1.1.1</span></h4><p><span>2018.06.15</span></p><ol start='' ><li><span>修复api低于25的设备闪退 </span><a href='https://github.com/Bakumon/MoneyKeeper/pull/5'><span>#5</span></a></li></ol><h4 id='110'><span>1.1.0</span></h4><p><span>2018.06.15</span></p><ol start='' ><li><span>终于有Lacuncher图标了，感谢 @梁月丶 小伙伴</span></li><li><span>连续记账功能</span></li><li><span>增加 Shortcut，记一笔、历史统计</span></li></ol><h4 id='102'><span>1.0.2</span></h4><p><span>2018.06.11</span></p><ol start='' ><li><span>修复由于混淆导致的选择月份对话框奔溃问题</span></li></ol><h4 id='101'><span>1.0.1</span></h4><p><span>2018.06.11</span></p><ol start='' ><li><span>备份逻辑修改：初始化记账类型时，如果已经存在备份文件，则不进行自动备份</span></li></ol><h4 id='100'><span>1.0.0</span></h4><p><span>2018.06.11</span></p><ol start='' ><li><span>记收支基本功能</span></li></ol><ul><li><span>增删改记账记录</span></li><li><span>增删改分类</span></li></ul><ol start='2' ><li><span>月统计</span></li></ol><ul><li><span>柱状图--每日收支汇总</span></li><li><span>饼状图--每种类型占收支比重</span></li></ul><ol start='3' ><li><span>本地数据备份</span></li></ol><ul><li><span>自动和手动备份db文件到外部储存空间</span></li></ul></div></div>
+</body>
+</html>
